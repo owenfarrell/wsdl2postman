@@ -4,7 +4,6 @@
   "description": "A module to convert SOAP web service definitions to Postman Collection Format v2.1",
   "main": "convert.js",
   "dependencies": {
-    "path": "^0.12.7",
     "pretty-data": "^0.40.0",
     "soap": "^0.23.0",
     "uuid": "^3.1.0"
@@ -27,7 +26,8 @@
   "devDependencies": {
     "codecov": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "path": "^0.12.7"
   },
   "scripts": {
     "test": "mocha",
