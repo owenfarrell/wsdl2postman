@@ -1,7 +1,6 @@
 var assert = require('assert');
 var converter = require('../convert');
 var Path = require('path');
-var fs = require('fs');
 
 describe('Converter', function () {
 
@@ -54,14 +53,15 @@ describe('Converter', function () {
             converter.parseFile(wsdlUri, () => done());
         });
 
-        it('should parse a WSDL with multiple services', function (done) {
-            let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/tools/javato/ws/src/test/resources/org/apache/cxf/tools/java2wsdl/processor/internal/jaxws/expected/expected_hello_world_doc_lit.wsdl';
+        it('should parse a WSDL with multiple ports', function (done) {
+            // TODO
+            let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/rt/ws/eventing/src/main/resources/wsdl/eventing.wsdl';
             converter.parseFile(wsdlUri, () => done());
         });
 
-        //TODO
-        it('should parse a WSDL with multiple ports', function (done) {
-            // TODO
+        it('should parse a WSDL with multiple services', function (done) {
+            let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/tools/javato/ws/src/test/resources/org/apache/cxf/tools/java2wsdl/processor/internal/jaxws/expected/expected_hello_world_doc_lit.wsdl';
+            converter.parseFile(wsdlUri, () => done());
         });
 
     });
