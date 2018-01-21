@@ -25,9 +25,9 @@ var converter = {
                     id: uuid.v4(),
                     name: serviceName,
                     item: this.parseService(client, serviceName, clientDescription[serviceName])
-                }
+                };
             });
-        callback && callback(collection);
+        callback(collection);
     },
 
     parseService: function (client, serviceName, serviceDescription) {
@@ -37,7 +37,7 @@ var converter = {
                     id: uuid.v4(),
                     name: portName,
                     item: this.parsePort(client, serviceName, portName, serviceDescription[portName])
-                }
+                };
             });
     },
 
@@ -52,7 +52,7 @@ var converter = {
                         body: { mode: 'raw' },
                         description: ''
                     }
-                }
+                };
                 client.httpClient = {
                     request: function (rurl, data, callback, exheaders, exoptions) {
                         operationItem.request.body.raw = pd.xml(data);
@@ -60,7 +60,7 @@ var converter = {
                             return {
                                 key: headerKey,
                                 value: exheaders[headerKey]
-                            }
+                            };
                         });
                         operationItem.request.url = rurl;
                     }
@@ -83,7 +83,7 @@ var converter = {
                     obj[fieldName.substr(0, fieldName.length - 2)] = [parameterValue];
                 }
                 else {
-                    obj[fieldName] = parameterValue
+                    obj[fieldName] = parameterValue;
                 }
 
             });
