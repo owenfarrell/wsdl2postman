@@ -54,7 +54,6 @@ describe('Converter', function () {
         });
 
         it('should parse a WSDL with multiple ports', function (done) {
-            // TODO
             let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/rt/ws/eventing/src/main/resources/wsdl/eventing.wsdl';
             converter.parseFile(wsdlUri, () => done());
         });
