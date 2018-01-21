@@ -1,0 +1,36 @@
+{
+  "name": "wsdl-to-postman",
+  "version": "0.0.1",
+  "description": "A module to convert SOAP web service definitions to Postman Collection Format v2.1",
+  "main": "convert.js",
+  "dependencies": {
+    "path": "^0.12.7",
+    "pretty-data": "^0.40.0",
+    "soap": "^0.23.0",
+    "uuid": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/owenfarrell/wsdl2postman.git"
+  },
+  "keywords": [
+    "wsdl",
+    "postman",
+    "newman"
+  ],
+  "author": "Owen Farrell <owen.farrell@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owenfarrell/wsdl2postman/issues"
+  },
+  "homepage": "https://github.com/owenfarrell/wsdl2postman",
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "cover": "istanbul cover _mocha"
+  }
+}
