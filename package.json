@@ -5,7 +5,7 @@
   "main": "convert.js",
   "dependencies": {
     "pretty-data": "^0.40.0",
-    "soap": "^0.23.0",
+    "soap": "^0.25.0",
     "uuid": "^3.1.0"
   },
   "repository": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/owenfarrell/wsdl2postman",
   "devDependencies": {
-    "codecov": "^3.0.0",
+    "codecov": "^3.1.0",
     "istanbul": "^0.4.5",
     "mocha": "^4.1.0",
     "path": "^0.12.7"
