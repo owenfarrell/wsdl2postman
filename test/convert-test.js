@@ -56,7 +56,7 @@ describe('Converter', function () {
         it('should parse a WSDL with multiple ports', function (done) {
             let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/rt/ws/eventing/src/main/resources/wsdl/eventing.wsdl';
             converter.parseFile(wsdlUri, () => done());
-        });
+        }).timeout(20000);
 
         it('should parse a WSDL with multiple services', function (done) {
             let wsdlUri = 'https://raw.githubusercontent.com/apache/cxf/HEAD/tools/javato/ws/src/test/resources/org/apache/cxf/tools/java2wsdl/processor/internal/jaxws/expected/expected_hello_world_doc_lit.wsdl';
