@@ -6,7 +6,8 @@
   "dependencies": {
     "pretty-data": "^0.40.0",
     "soap": "^0.25.0",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "snyk": "^1.189.0"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "cover": "istanbul cover _mocha"
-  }
+    "cover": "istanbul cover _mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
