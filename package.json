@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/owenfarrell/wsdl2postman",
   "devDependencies": {
-    "codecov": "^3.1.0",
+    "codecov": "^3.6.5",
     "istanbul": "^0.4.5",
     "mocha": "^4.1.0",
     "path": "^0.12.7"
