@@ -51,11 +51,19 @@ var converter = {
                         method: 'POST',
                         body: { mode: 'raw' },
                         description: ''
+                    },
+                    response: {
+                        id: uuid.v4(),
+                        code: 200,
+                        originalRequest: {
+                            method: 'POST',
+                            description: ''
+                        }
                     }
                 };
                 client.httpClient = {
                     request: function (rurl, data, callback, exheaders, exoptions) {
-                        operationItem.request.body.raw = pd.xml(data);
+                        operationItem.response.originalRequest.body = pd.xml(data);
                         operationItem.request.header = Object.keys(exheaders).map((headerKey) => {
                             return {
                                 key: headerKey,
