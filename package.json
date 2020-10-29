@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A module to convert SOAP web service definitions to Postman Collection Format v2.1",
   "main": "convert.js",
+  "bin": "./console.js",
   "dependencies": {
     "pretty-data": "^0.40.0",
     "soap": "^0.25.0",
