@@ -1,0 +1,34 @@
+
+name: Publish
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://registry.npmjs.org
+      - name: Clean Install
+        run: npm install
+      - name: Run Build
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Bump Version
+        run: npm version patch --git-tag-version=false
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          title: Prepare for next development iteration
+          base: main
