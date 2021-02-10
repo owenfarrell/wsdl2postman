@@ -5,7 +5,7 @@
   "main": "convert.js",
   "dependencies": {
     "pretty-data": "^0.40.0",
-    "soap": "^0.25.0",
+    "soap": "^0.27.0",
     "uuid": "^3.1.0"
   },
   "repository": {
